@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AppStyle from './stylesheets/css/application.css'
 
+// import Footer from "./components/Footer/Footer.pug"
+// import sass from 'node-sass';
 class App extends Component {
+
+
   render() {
+    // var pug = require('pug');
+    // var fn = pug.compile(fs.readFile("./components/Footer/Footer.pug"));
+    // var html = fn(locals);
+
+    // var  Footer = require("./components/Footer/Footer.pug")
+    // var sass = require('node-sass');
+    // console.log(sass.info);
     return (
-      <div className="App">
+      <div className="App" style = { AppStyle } >
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -20,7 +32,9 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        {/* <Footer /> */}
       </div>
+
     );
   }
 }
