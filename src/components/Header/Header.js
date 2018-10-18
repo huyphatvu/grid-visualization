@@ -1,42 +1,44 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import { FormattedMessage } from 'react-intl';
+import React, { Component } from 'react';
+import {BrowserRouter, Route, Link } from 'react-router-dom';
+import MenuButton from "../MenuButton/MenuButton";
 
-// Import Style
-import styles from './Header.css';
+class Header extends Component{
+  componentDidMount () {
+    const script = document.createElement("script");
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = "./javascripts/navigation.js";
+    document.body.appendChild(script);
+  }
 
-export function Header(props, context) {
-  const languageNodes = props.intl.enabledLanguages.map(
-    lang => <li key={lang} onClick={() => props.switchLanguage(lang)} className={lang === props.intl.locale ? styles.selected : ''}>{lang}</li>
-  );
-
-  return (
-    <div className={styles.header}>
-      <div className={styles['language-switcher']}>
-        <ul>
-          <li><FormattedMessage id="switchLanguage" /></li>
-          {languageNodes}
-        </ul>
-      </div>
-      <div className={styles.content}>
-        <h1 className={styles['site-title']}>
-          <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
-        </h1>
-
-      </div>
-    </div>
-  );
+  render() {
+    return (
+            <ul className="topnav unclick">
+              <MenuButton />
+              <div className="topnav-content unclick">
+                <li><a href="#">   Home  </a></li>
+                <li>
+                    <a href="#">   Ordering & Direction  </a>
+                    <div className="dropdown">
+                      <button className="dropbtn collapsible unclick">
+                          Models
+                          <i className="arrow point-right unclick"></i>
+                      </button>
+                      <div className="dropdown-content content">
+                        <a className="nav-a" href="#">   flex-direction  </a>
+                        <a className="nav-a" href="#">   flex-wrap  </a>
+                        <a className="nav-link" href="#">   flex-flow  </a>
+                        <a className="nav-link" href="#">   order  </a>
+                      </div>
+                    </div>
+                </li>
+                <li><a href="#">   Alignment  </a></li>
+                <li><a href="#">   Flexibility  </a></li>
+              </div>
+            </ul>
+    );
+  }
 }
 
-Header.contextTypes = {
-  router: PropTypes.object,
-};
-
-Header.propTypes = {
-  toggleAddPost: PropTypes.func.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
-  intl: PropTypes.object.isRequired,
-};
 
 export default Header;

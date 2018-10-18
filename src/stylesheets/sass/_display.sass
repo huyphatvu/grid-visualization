@@ -1,0 +1,21 @@
+.block
+  display: block
+// Display for SWAN LAKE
+.swan-lake-flex
+  display: flex
+  flex-direction: row
+  -ms-flex-direction: row
+  -webkit-flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+
+//remember to change _display: body_background to the same min-width if min-width changed
+@media screen and (max-width: 1500px)
+  .flex
+    display: flex
+    flex-direction: column
+    -ms-flex-direction: column
+    -webkit-flex-direction: column
+    justify-content: space-between
+    flex-wrap: nowrap
+    height: 100vh
