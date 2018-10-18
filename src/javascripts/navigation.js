@@ -1,7 +1,6 @@
 import $, { screen } from 'jquery';
 var breakPointSize = 1200;
 
-console.log("hello");
 $(".collapsible").hover(function(){
         if(screen.width >= breakPointSize){
             let pointer = this.children[0];
@@ -76,7 +75,6 @@ function toggleListItems(content, sibling_content){
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
     //unclick is used to bind together the action when clicked outside navigation bar
-
     if (!event.target.classList.contains("unclick")) {
         // alert("THI");
         var coll = document.getElementsByClassName("collapsible");
@@ -92,7 +90,6 @@ window.onclick = function(event) {
                 content.style.maxHeight = null;
             }
         }
-
 
         var menu_button = document.getElementsByClassName("menu-button").item(0);
         if(menu_button.classList.contains("change"))

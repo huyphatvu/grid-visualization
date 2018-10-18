@@ -1,39 +1,60 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Link } from 'react-router-dom';
-import MenuButton from "../MenuButton/MenuButton";
+import MenuButton from "./components/MenuButton/MenuButton";
+import Arrow from "./components/Arrow/Arrow";
 
 class Header extends Component{
-  componentDidMount () {
-    const script = document.createElement("script");
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = "./javascripts/navigation.js";
-    document.body.appendChild(script);
+  constructor(props){
+    super(props);
+    this.state ={
+      isToggleOn: false,
+      showList: false
+    }
+    this.handleHoverEvent = this.handleHoverEvent.bind(this);
+    this.showList = this.showList.bind(this);
   }
+
+  handleHoverEvent(e){
+    // console.log(e);
+    this.setState({
+      isToggleOn: true,
+      showList: true
+    });
+  }
+
+  showList(){
+      let element = (
+        <div className="dropdown-content content">
+          <a className="nav-link" href="/">   flex-direction  </a>
+          <a className="nav-link" href="/">   flex-wrap  </a>
+          <a className="nav-link" href="/">   flex-flow  </a>
+          <a className="nav-link" href="/">   order  </a>
+        </div>);
+        console.log(element.props.children);
+      // element.style.maxHeight = element.scrollHeight+ 20 + "px";
+      return element;
+
+  }
+
+
 
   render() {
     return (
-            <ul className="topnav unclick">
+            <ul className="topnav">
               <MenuButton />
-              <div className="topnav-content unclick">
-                <li><a href="#">   Home  </a></li>
+              <div className="topnav-content">
+                <li><button href="/">   Home  </button></li>
                 <li>
-                    <a href="#">   Ordering & Direction  </a>
                     <div className="dropdown">
-                      <button className="dropbtn collapsible unclick">
+                      <button aria-haspopup="true" className="dropbtn collapsible " onMouseEnter={this.handleHoverEvent}>
                           Models
-                          <i className="arrow point-right unclick"></i>
+                          <Arrow isToggleOn={this.state.isToggleOn}/>
                       </button>
-                      <div className="dropdown-content content">
-                        <a className="nav-a" href="#">   flex-direction  </a>
-                        <a className="nav-a" href="#">   flex-wrap  </a>
-                        <a className="nav-link" href="#">   flex-flow  </a>
-                        <a className="nav-link" href="#">   order  </a>
-                      </div>
+                      {this.showList()}
                     </div>
                 </li>
-                <li><a href="#">   Alignment  </a></li>
-                <li><a href="#">   Flexibility  </a></li>
+                <li><button href="/">   Alignment  </button></li>
+                <li><button href="/">   Flexibility  </button></li>
               </div>
             </ul>
     );

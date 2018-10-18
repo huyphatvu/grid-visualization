@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 
 class MenuButton extends Component{
-  myFunction(x) {
-    x.classList.toggle("change");
-    var top_nav= document.getElementsByClassName("topnav-content").item(0);
-    top_nav.classList.toggle("nav-appear");
-  }
   handleClick(e){
     e.preventDefault();
-    // e.classList.toggle("change");
-    console.log(e);
+    console.log(e.currentTarget);
+    e.currentTarget.classList.toggle("change");
+    var top_nav= document.getElementsByClassName("topnav-content").item(0);
+    top_nav.classList.toggle("nav-appear");
   }
 
   render() {
