@@ -1,0 +1,24 @@
+@import mixin_custom_funct
+.script-block
+  flex-basis: 200px
+  flex-grow: 2
+  flex-shrink: 5
+  margin: 1em
+  display: block
+  background: rgb(239, 207, 217)
+  // border: solid 2px rgb(188, 107, 130)
+  padding: 1em
+  // max-height: 100%
+  // min-width: 27%
+  @include box-shadow(2px 2px 2px 2px rgba(191, 191, 191, 0.36))
+  @include border-radius(10px)
+  border: 2px solid gba(191, 191, 191, 0.36)
+  > pre
+    font-size: 1.1em
+    padding: 0 10px
+    margin: 0
+    @include border-radius(10px)
+
+@media screen and (max-width: 500px)
+  .script-block
+    margin: 0 0 1em

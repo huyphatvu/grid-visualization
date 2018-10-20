@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Link } from 'react-router-dom';
+// import {BrowserRouter, Route, Link } from 'react-router-dom';
 import MenuButton from "./components/MenuButton/MenuButton";
 import Arrow from "./components/Arrow/Arrow";
 
@@ -12,9 +12,10 @@ class Header extends Component{
     }
     this.handleHoverEvent = this.handleHoverEvent.bind(this);
     this.showList = this.showList.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleHoverEvent(e){
+  handleHoverEvent(){
     // console.log(e);
     this.setState({
       isToggleOn: true,
@@ -22,18 +23,33 @@ class Header extends Component{
     });
   }
 
+  handleClick(){
+    if(this.state.showList){
+      this.setState({
+        isToggleOn: false,
+        showList: false
+      });
+    } else{
+      this.setState({
+        isToggleOn: true,
+        showList: true
+      });
+    }
+  }
+
   showList(){
+    if(this.state.showList){
       let element = (
-        <div className="dropdown-content content">
+        <div className="dropdown-content dropdown-block-appear-transition">
           <a className="nav-link" href="/">   flex-direction  </a>
           <a className="nav-link" href="/">   flex-wrap  </a>
           <a className="nav-link" href="/">   flex-flow  </a>
           <a className="nav-link" href="/">   order  </a>
-        </div>);
+        </div>
+      );
         console.log(element.props.children);
-      // element.style.maxHeight = element.scrollHeight+ 20 + "px";
       return element;
-
+    }
   }
 
 
@@ -46,7 +62,7 @@ class Header extends Component{
                 <li><button href="/">   Home  </button></li>
                 <li>
                     <div className="dropdown">
-                      <button aria-haspopup="true" className="dropbtn collapsible " onMouseEnter={this.handleHoverEvent}>
+                      <button className="dropbtn " onMouseEnter={this.handleHoverEvent} onClick={this.handleClick}>
                           Models
                           <Arrow isToggleOn={this.state.isToggleOn}/>
                       </button>

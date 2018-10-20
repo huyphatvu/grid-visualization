@@ -4,16 +4,16 @@
 //*--------------------------------------------------------------
 // Navigation Bar
 //--------------------------------------------------------------*/
-$super-dark-blue: #156aa8
-$medium-dark-blue:  rgb(22, 98, 162)
-$light-blue: #357bbb
-$content-bg: rgba(35, 95, 149, 0.75)
-$content-bg-hover: rgba(35, 86, 134, 0.8)
+$content-bg: rgba(177, 111, 130, 0.75)
+$content-bg-hover: rgba(189, 77, 109, 0.75)
 $begin-degree: 0deg
 $after-degree: -315deg
+$medium-pink: rgb(177, 111, 130)
+$super-pink: rgb(146, 45, 74)
+$super-pink-faded: rgba(146, 45, 74, 0.86)
 
 i
-  border: solid #99b5ce
+  border: solid rgb(191, 147, 160)
   border-width: 0 4px 4px 0
   display: inline-block
   padding: 3.2px
@@ -28,7 +28,7 @@ ul.topnav
   overflow: visible
   display: block
   height: 3.6em
-  background-color: $medium-dark-blue
+  background-color: $medium-pink
   position: sticky
   top: 0px
   z-index: 1000
@@ -48,25 +48,24 @@ ul.topnav
         text-decoration: none
         font-family:  'Merriweather','Roboto Slab', ".SF NS Display", serif
         font-size: 1em
-        background-color: $medium-dark-blue
-
+        background-color: $medium-pink
 
 //***************COLLAPSIBLE CONTENTS
-.collapsible
-  color: white
-  cursor: pointer
-  padding: 18px
-  width: 100%
-  border: none
-  text-align: left
-  outline: none
-  font-size: 15px
+// .collapsible
+//   color: white
+//   cursor: pointer
+//   padding: 18px
+//   width: 100%
+//   border: none
+//   text-align: left
+//   outline: none
+//   font-size: 15px
 
-.content
-  max-height: 0
-  overflow: hidden
-  background-color: #f1f1f1
-  @include transition(max-height 0.2s ease-out)
+// .content
+//   max-height: 0
+//   overflow: hidden
+//   background-color: #f1f1f1
+
 
 //*********** Menu Button (Hamburger button)
 .top-button
@@ -75,7 +74,7 @@ ul.topnav
 .menu-button
   display: none
   cursor: pointer
-  background-color: #2d9dfa
+  background-color: $super-pink
   float: right
   margin: 7px 7px
   height: 40px
@@ -114,7 +113,6 @@ ul.topnav
     to
       opacity: 0.95
       @include transform(translateX(0px))
-
   @include animation(appear 0.5s normal 1)
 
 .arrow-turn-down
@@ -126,6 +124,17 @@ ul.topnav
   @include animation(turn-down-arrow 0.5s)
   @include transform(rotate(45deg))
 
+//************* Make the drop box appear
+.dropdown-block-appear-transition
+    @include keyframes(dropdown-block-appear)
+      from
+        opacity: 0.4
+        @include transform(translateY(-15px))
+
+      to
+        opacity: 0.95
+        @include transform(translateY(0px))
+    @include animation(dropdown-block-appear 0.5s normal 1)
 
 ///*--------------------------------------------------------------
 // Big Screen
@@ -135,7 +144,7 @@ ul.topnav
 @media screen and (min-width: 1100px)
   ul.topnav
     height: 3.6em
-    border-left: #95b9d3 10px solid !important
+    // border-left: #95b9d3 10px solid !important
     li
       > a, button
         @include border-radius(30px 30px 5px 5px )
@@ -143,7 +152,7 @@ ul.topnav
         height: 3.6em
         padding-left:  10px !important
         &:hover
-          background-color: #0d4676
+          background-color: $super-pink-faded
         border: none
 
           //text-decoration: underline #ffffff
@@ -156,14 +165,13 @@ ul.topnav
       z-index: 10000
       @include box-shadow(0px 8px 16px 0px rgba(0,0,0,0.2))
       > a
-        height: 10em
+        height: 5em
         background-color: $content-bg !important
-        font-size: 0.9em !important
+        font-size: 1em !important
         &:hover
           background-color: $content-bg-hover !important
         &:not(:first-child)
-          border-left: 2px solid rgba(8, 69, 135, 1)
-          padding: 20px
+          border-left: 2px solid $super-pink
           text-decoration: none
           display: inline
 
@@ -184,7 +192,7 @@ ul.topnav
       text-align: center
       > a, button
         text-align: left
-        background-color: #156aa8
+        background-color: $super-pink
         opacity: 0.95
         font-size: 15px !important
         font-weight: normal !important
@@ -195,11 +203,11 @@ ul.topnav
         > a
           text-align: center !important
           font-size: 0.9em !important
-          background-color: rgba(18, 62,97, 1)
+          background-color: $super-pink
           //opacity: 0.96
           &:not(:last-child)
-            border-bottom: 0.5px solid rgba(10, 69, 118, 1)
-          max-height: 200px !important
+            border-bottom: 0.5px solid $super-pink
+
 
   // don't display the content until click the hamburger button
   .topnav-content
