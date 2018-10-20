@@ -1,13 +1,13 @@
 {
-  "main.css": "/grid-visualization-website/static/css/main.4e88cc29.chunk.css",
-  "main.js": "/grid-visualization-website/static/js/main.5e0c0da1.chunk.js",
-  "main.js.map": "/grid-visualization-website/static/js/main.5e0c0da1.chunk.js.map",
-  "static/js/1.721fc1ca.chunk.js": "/grid-visualization-website/static/js/1.721fc1ca.chunk.js",
-  "static/js/1.721fc1ca.chunk.js.map": "/grid-visualization-website/static/js/1.721fc1ca.chunk.js.map",
-  "runtime~main.js": "/grid-visualization-website/static/js/runtime~main.e689c135.js",
-  "runtime~main.js.map": "/grid-visualization-website/static/js/runtime~main.e689c135.js.map",
-  "static/css/main.4e88cc29.chunk.css.map": "/grid-visualization-website/static/css/main.4e88cc29.chunk.css.map",
-  "index.html": "/grid-visualization-website/index.html",
-  "precache-manifest.a30ff43031f9dcad9d80b3bb7a6a3bd9.js": "/grid-visualization-website/precache-manifest.a30ff43031f9dcad9d80b3bb7a6a3bd9.js",
-  "service-worker.js": "/grid-visualization-website/service-worker.js"
+  "main.css": "/grid-visualization/static/css/main.4e88cc29.chunk.css",
+  "main.js": "/grid-visualization/static/js/main.55920148.chunk.js",
+  "main.js.map": "/grid-visualization/static/js/main.55920148.chunk.js.map",
+  "static/js/1.721fc1ca.chunk.js": "/grid-visualization/static/js/1.721fc1ca.chunk.js",
+  "static/js/1.721fc1ca.chunk.js.map": "/grid-visualization/static/js/1.721fc1ca.chunk.js.map",
+  "runtime~main.js": "/grid-visualization/static/js/runtime~main.4691661f.js",
+  "runtime~main.js.map": "/grid-visualization/static/js/runtime~main.4691661f.js.map",
+  "static/css/main.4e88cc29.chunk.css.map": "/grid-visualization/static/css/main.4e88cc29.chunk.css.map",
+  "index.html": "/grid-visualization/index.html",
+  "precache-manifest.7ed663e2a7561076447dae6c85f605d9.js": "/grid-visualization/precache-manifest.7ed663e2a7561076447dae6c85f605d9.js",
+  "service-worker.js": "/grid-visualization/service-worker.js"
 }
