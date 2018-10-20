@@ -13,6 +13,7 @@ class Header extends Component{
     this.handleHoverEvent = this.handleHoverEvent.bind(this);
     this.showList = this.showList.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
 
   handleHoverEvent(){
@@ -37,10 +38,17 @@ class Header extends Component{
     }
   }
 
+  handleMouseLeave(){
+    this.setState({
+      isToggleOn: false,
+      showList: false
+    });
+  }
+
   showList(){
     if(this.state.showList){
       let element = (
-        <div className="dropdown-content dropdown-block-appear-transition">
+        <div className="dropdown-content dropdown-block-appear-transition" onMouseLeave={this.handleMouseLeave}>
           <a className="nav-link" href="/">   flex-direction  </a>
           <a className="nav-link" href="/">   flex-wrap  </a>
           <a className="nav-link" href="/">   flex-flow  </a>

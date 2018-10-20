@@ -14,6 +14,8 @@ class App extends Component {
         <Header />
         <div className="block">
             <DemoBox />
+            <DemoBox />
+            <DemoBox />
         </div>
         <Footer />
       </div>
