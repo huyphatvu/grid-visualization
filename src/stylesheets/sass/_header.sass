@@ -27,7 +27,7 @@ ul.topnav
   padding: 0
   overflow: visible
   display: block
-  height: 3.6em
+  height: 3.4em
   background-color: $medium-pink
   position: sticky
   top: 0px
@@ -143,23 +143,20 @@ ul.topnav
 //******************* Media Queries
 @media screen and (min-width: 1100px)
   ul.topnav
-    height: 3.6em
+    height: 3.4em
     // border-left: #95b9d3 10px solid !important
     li
       > a, button
         @include border-radius(30px 30px 5px 5px )
-        //border-right: #95b9d3 10px solid !important
-        height: 3.6em
         padding-left:  10px !important
         &:hover
           background-color: $super-pink-faded
         border: none
 
-          //text-decoration: underline #ffffff
     .dropdown-content
       display: flex
       position: absolute
-      top: 3.5em
+      top: 3.4em
       background-color: rgba(0,0,0,0)
       height: auto
       z-index: 10000
@@ -189,15 +186,18 @@ ul.topnav
     z-index: 1000
     li.right, li
       float: none
+      width: 100vw
       text-align: center
       > a, button
+        // width: 100%
         text-align: left
         background-color: $super-pink
         opacity: 0.95
         font-size: 15px !important
         font-weight: normal !important
         @include box-shadow(inset 0px -0.2px 0.7px 0px #839ec1)
-
+      > a
+        width: auto
       .dropdown-content
         @include border-radius(15px 15px 15px 15px)
         > a

@@ -29,7 +29,7 @@ ul.topnav {
   padding: 0;
   overflow: visible;
   display: block;
-  height: 3.6em;
+  height: 3.4em;
   background-color: #b16f82;
   position: sticky;
   top: 0px;
@@ -359,12 +359,11 @@ ul.topnav {
 
 @media screen and (min-width: 1100px) {
   ul.topnav {
-    height: 3.6em; }
+    height: 3.4em; }
     ul.topnav li > a, ul.topnav li button {
       border-radius: 30px 30px 5px 5px;
       -moz-border-radius: 30px 30px 5px 5px;
       -webkit-border-radius: 30px 30px 5px 5px;
-      height: 3.6em;
       padding-left: 10px !important;
       border: none; }
       ul.topnav li > a:hover, ul.topnav li button:hover {
@@ -372,7 +371,7 @@ ul.topnav {
     ul.topnav .dropdown-content {
       display: flex;
       position: absolute;
-      top: 3.5em;
+      top: 3.4em;
       background-color: rgba(0, 0, 0, 0);
       height: auto;
       z-index: 10000;
@@ -400,6 +399,7 @@ ul.topnav {
     z-index: 1000; }
     ul.topnav li.right, ul.topnav li {
       float: none;
+      width: 100vw;
       text-align: center; }
       ul.topnav li.right > a, ul.topnav li.right button, ul.topnav li > a, ul.topnav li button {
         text-align: left;
@@ -410,6 +410,8 @@ ul.topnav {
         -webkit-box-shadow: inset 0px -0.2px 0.7px 0px #839ec1;
         -moz-box-shadow: inset 0px -0.2px 0.7px 0px #839ec1;
         box-shadow: inset 0px -0.2px 0.7px 0px #839ec1; }
+      ul.topnav li.right > a, ul.topnav li > a {
+        width: auto; }
       ul.topnav li.right .dropdown-content, ul.topnav li .dropdown-content {
         border-radius: 15px 15px 15px 15px;
         -moz-border-radius: 15px 15px 15px 15px;

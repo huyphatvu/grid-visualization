@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import AppStyle from './stylesheets/css/application.css';
 // import pug from 'pug';
 import Header from "./components/Header/Header"
 import DemoBox from "./components/DemoBox/DemoBox"
@@ -10,7 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" class="flex" style = { AppStyle } >
+      <div className="App" class="flex"  >
         <Header />
         <div className="block">
             <DemoBox />

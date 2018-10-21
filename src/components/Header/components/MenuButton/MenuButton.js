@@ -13,9 +13,9 @@ class MenuButton extends Component{
     return(
         <li className="top-button unclick">
           <div className="menu-button unclick" onClick={this.handleClick}>
-            <div className="bar1 unclick"></div>
-            <div className="bar2 unclick"></div>
-            <div className="bar3 unclick"></div>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
           </div>
         </li>
     );

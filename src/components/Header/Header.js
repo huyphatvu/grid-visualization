@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import {BrowserRouter, Route, Link } from 'react-router-dom';
 import MenuButton from "./components/MenuButton/MenuButton";
 import Arrow from "./components/Arrow/Arrow";
-
+import { Link } from "react-router-dom"
 class Header extends Component{
   constructor(props){
     super(props);
@@ -49,13 +49,12 @@ class Header extends Component{
     if(this.state.showList){
       let element = (
         <div className="dropdown-content dropdown-block-appear-transition" onMouseLeave={this.handleMouseLeave}>
-          <a className="nav-link" href="/">   flex-direction  </a>
-          <a className="nav-link" href="/">   flex-wrap  </a>
-          <a className="nav-link" href="/">   flex-flow  </a>
-          <a className="nav-link" href="/">   order  </a>
+          <Link className="nav-link" to="/" > flex-direction  </Link>
+          <Link className="nav-link" to="/two"> flex-wrap  </Link>
+          <Link className="nav-link" to="/three"> flex-flow  </Link>
+          <Link className="nav-link" to="/two"> order  </Link>
         </div>
       );
-        console.log(element.props.children);
       return element;
     }
   }
@@ -67,18 +66,18 @@ class Header extends Component{
             <ul className="topnav">
               <MenuButton />
               <div className="topnav-content">
-                <li><button href="/">   Home  </button></li>
+                <li><Link to="/" onMouseOver={this.handleMouseLeave}> Home  </Link></li>
                 <li>
                     <div className="dropdown">
-                      <button className="dropbtn " onMouseEnter={this.handleHoverEvent} onClick={this.handleClick}>
+                      <button className="dropbtn" onMouseEnter={this.handleHoverEvent} onClick={this.handleClick}>
                           Models
                           <Arrow isToggleOn={this.state.isToggleOn}/>
                       </button>
                       {this.showList()}
                     </div>
                 </li>
-                <li><button href="/">   Alignment  </button></li>
-                <li><button href="/">   Flexibility  </button></li>
+                <li><Link to="/two" onMouseOver={this.handleMouseLeave} > Alignment  </Link></li>
+                <li><Link to="/three" onMouseOver={this.handleMouseLeave} > Flexibility  </Link></li>
               </div>
             </ul>
     );
