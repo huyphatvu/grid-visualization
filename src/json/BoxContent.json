@@ -1,0 +1,12 @@
+{
+  "BoxContentArr": [
+    {
+      "html": "<div className=\"grid-block-outer\">\r\n    <div className=\"grid-block-inner\">\r\n      <p>Some Text\r\n        <div className=\"grid-container\">\r\n          <div class=\"grid-item\">1<\/div>\r\n          <div class=\"grid-item\">2<\/div>\r\n          <div class=\"grid-item\">3<\/div>\r\n          <div class=\"grid-item\">4<\/div>\r\n          <div class=\"grid-item\">5<\/div>\r\n          <div class=\"grid-item\">6<\/div>\r\n          <div class=\"grid-item\">7<\/div>\r\n          <div class=\"grid-item\">8<\/div>\r\n          <div class=\"grid-item\">9<\/div>\r\n        <\/div>\r\n      <\/p>\r\n    <\/div>\r\n<\/div>",
+      "css": "\nBox1 CSS version\n.grid-container {\n\tdisplay: grid-inline;\n}"
+    },
+    {
+      "html":"\nBox2 HTML version\n.grid-container { \n\tdisplay: grid-inline;\n}",
+      "css":"\nBox2 CSS version\n.grid-container {\n\tdisplay: grid-inline;\n}"
+    }
+  ]
+}

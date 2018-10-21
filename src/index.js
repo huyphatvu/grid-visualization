@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 // import App from './App';
 import AppStyle from './stylesheets/css/application.css';
 import Layout from './components/Layout/Layout';
-import DemoBox from './components/DemoBox/DemoBox';
+// import DemoBox from './components/DemoBox/DemoBox';
+import GridVisualization from "./pages/grid_visualization/index"
 import DemoBox2 from './components/DemoBox2/DemoBox';
 import DemoBox3 from './components/DemoBox3/DemoBox';
 // import * as serviceWorker from './serviceWorker';
@@ -19,7 +20,7 @@ class Main extends Component {
         <div style = { AppStyle }>
           <Layout>
             <Switch>
-              <Route exact path={`/`} component={DemoBox} />
+              <Route exact path={`/`} component={GridVisualization} />
               <Route exact path={`/two`}component={DemoBox2} />
               <Route exact path={`/three`} component={DemoBox3} />
             </Switch>

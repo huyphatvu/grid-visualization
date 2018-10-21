@@ -1,0 +1,19 @@
+@import mixin_custom_funct
+
+.tabbar
+  background-color: rgb(224, 126, 156)
+  margin: 0
+  padding: 0
+  height: 35px
+  @include box-shadow(0px 1px 2px 1px rgba(210, 135, 158, 0.37))
+  > button
+    border: none
+    border-right: 2px solid white
+    height: 35px
+    width: 55px
+    background-color: rgb(189, 55, 97)
+    color: white
+    @include border-radius(0px 0px 10px 2px)
+    @include box-shadow(0px 0px 3px 1px rgba(210, 135, 158, 0.37))
+    &:hover
+      background-color: rgb(199, 113, 140)
