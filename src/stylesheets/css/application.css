@@ -474,7 +474,7 @@ ul.topnav {
 .demo-container-wrapper {
   margin: 1em; }
   .demo-container-wrapper .demo-container {
-    height: 22em;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -486,12 +486,13 @@ ul.topnav {
     margin: 0; } }
 
 .script-block {
-  flex-basis: 200px;
+  flex-basis: 500px;
   flex-grow: 2;
-  flex-shrink: 5;
+  flex-shrink: 3;
   margin: 1em;
   display: block;
   background: #fbebf0;
+  height: auto;
   -webkit-box-shadow: 2px 2px 2px 2px rgba(191, 191, 191, 0.36);
   -moz-box-shadow: 2px 2px 2px 2px rgba(191, 191, 191, 0.36);
   box-shadow: 2px 2px 2px 2px rgba(191, 191, 191, 0.36);
@@ -499,14 +500,18 @@ ul.topnav {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border: 2px solid gba(191, 191, 191, 0.36);
-  overflow: scroll; }
-  .script-block > pre {
-    font-size: 1.1em;
-    padding: 1em 20px;
-    margin: 0;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px; }
+  overflow: hidden; }
+  .script-block .code-content {
+    height: 90%;
+    overflow: scroll; }
+    .script-block .code-content > pre {
+      overflow-y: scroll;
+      font-size: 1.1em;
+      padding: 1em 20px;
+      margin: 0;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px; }
 
 @media screen and (max-width: 500px) {
   .script-block {
@@ -554,22 +559,53 @@ ul.topnav {
   background-color: #e07e9c;
   margin: 0;
   padding: 0;
-  height: 35px;
+  height: auto;
   -webkit-box-shadow: 0px 1px 2px 1px rgba(210, 135, 158, 0.37);
   -moz-box-shadow: 0px 1px 2px 1px rgba(210, 135, 158, 0.37);
   box-shadow: 0px 1px 2px 1px rgba(210, 135, 158, 0.37); }
   .tabbar > button {
     border: none;
-    border-right: 2px solid white;
     height: 35px;
-    width: 55px;
-    background-color: #bd3761;
-    color: white;
-    border-radius: 0px 0px 10px 2px;
-    -moz-border-radius: 0px 0px 10px 2px;
-    -webkit-border-radius: 0px 0px 10px 2px;
+    width: 70px;
+    color: #bd3761;
+    background-color: #fbebf0;
+    border: 2px solid #bd3761;
+    font-weight: bold;
+    border-radius: 2px 2px 5px 5px;
+    -moz-border-radius: 2px 2px 5px 5px;
+    -webkit-border-radius: 2px 2px 5px 5px;
     -webkit-box-shadow: 0px 0px 3px 1px rgba(210, 135, 158, 0.37);
     -moz-box-shadow: 0px 0px 3px 1px rgba(210, 135, 158, 0.37);
     box-shadow: 0px 0px 3px 1px rgba(210, 135, 158, 0.37); }
     .tabbar > button:hover {
       background-color: #c7718c; }
+
+.current-tab {
+  color: white !important;
+  background-color: #bd3761 !important; }
+
+.option-tabbar {
+  text-align: center;
+  margin: 0.7em; }
+  .option-tabbar > button {
+    margin: 0 1em 0;
+    border: none;
+    height: 3em;
+    width: 7em;
+    font-size: 0.8em;
+    color: #bd3761;
+    background-color: #fbebf0;
+    border: 2px solid #bd3761;
+    font-weight: bold;
+    border-radius: 2px 2px 5px 5px;
+    -moz-border-radius: 2px 2px 5px 5px;
+    -webkit-border-radius: 2px 2px 5px 5px;
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(210, 135, 158, 0.37);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(210, 135, 158, 0.37);
+    box-shadow: 0px 0px 3px 1px rgba(210, 135, 158, 0.37); }
+    .option-tabbar > button:hover {
+      background-color: #c7718c; }
+
+.current-option {
+  color: white !important;
+  background-color: #bd3761 !important; }

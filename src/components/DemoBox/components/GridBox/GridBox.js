@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class GridBox extends Component {
   render(){
     return(
-
       <div className="grid-block-outer">
         <div className="grid-block-inner">
           <p>Some Text

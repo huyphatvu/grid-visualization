@@ -30,8 +30,10 @@ class GridBox extends Component {
   render(){
     return(
         <div className="script-block">
-          <TabBar callbackFromParent={this.buttonSelectCallBack}/>
-          {this.renderCodeContent()}
+          <TabBar callbackFromParent={this.buttonSelectCallBack} tabID={this.props.gridId} />
+          <div className="code-content">
+            {this.renderCodeContent()}
+          </div>
         </div>
 
     );

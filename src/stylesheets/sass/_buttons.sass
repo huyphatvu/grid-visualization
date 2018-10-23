@@ -1,15 +1,14 @@
 @import mixin_custom_funct
 
-.tabbar
-  background-color: rgb(224, 126, 156)
-  margin: 0
-  padding: 0
-  height: auto
-  @include box-shadow(0px 1px 2px 1px rgba(210, 135, 158, 0.37))
+.option-tabbar
+  text-align: center
+  margin: 0.7em
   > button
+    margin: 0 1em 0
     border: none
-    height: 35px
-    width: 70px
+    height: 3em
+    width: 7em
+    font-size: 0.8em
     color: rgb(189, 55, 97)
     background-color: rgb(251, 235, 240)
     border: 2px solid rgb(189, 55, 97)
@@ -19,6 +18,6 @@
     &:hover
       background-color: rgb(199, 113, 140)
 
-.current-tab
+.current-option
     color: white !important
     background-color: rgb(189, 55, 97) !important
