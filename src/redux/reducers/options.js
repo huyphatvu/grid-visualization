@@ -1,20 +1,18 @@
-const options = (state = [], action) => {
+import BoxContent from  '../../json/BoxContent.json'
+
+//(state, action) => newState
+const options = (state = BoxContent.BoxContentArr[0], action) => {
   switch (action.type) {
-    case 'ADD_TODO':
-      return [
-        ...state,
-        {
-          id: action.id,
-          text: action.text,
-          completed: false
-        }
-      ]
-    case 'TOGGLE_TODO':
-      return state.map(todo =>
-        (todo.id === action.id)
-          ? {...todo, completed: !todo.completed}
-          : todo
-      )
+    case 'TOGGLE_OPTION':
+      switch(action.contentID){
+        case 0:
+          return BoxContent.BoxContentArr[0]
+        case 1:
+          return BoxContent.BoxContentArr[1]
+        default:
+          return state
+      }
+
     default:
       return state
   }

@@ -1,36 +1,33 @@
 import React, { Component } from 'react';
 import TabBar from './TabBar';
+import { connect } from 'react-redux'
 
 class GridBox extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      selectedCodeContent: "CSS"
-    };
-    this.buttonSelectCallBack = this.buttonSelectCallBack.bind(this);
-    this.renderCodeContent = this.renderCodeContent.bind(this);
+  state = {
+    selectedCodeContent: "CSS"
   }
 
-  buttonSelectCallBack(contentID){
+  buttonSelectCallBack = (contentID) => {
     this.setState({selectedCodeContent: contentID})
   }
 
-  renderCodeContent() {
+  renderCodeContent = () => {
     if(this.state.selectedCodeContent === "HTML"){
       return (
-        <pre>{this.props.boxContent.BoxContentArr[0].html}</pre>
+        <pre>{this.props.contentDisplay.html}</pre>
      );
     } else{
       return (
-        <pre>{this.props.boxContent.BoxContentArr[0].css}</pre>
+        <pre>{this.props.contentDisplay.css}</pre>
      );
     }
   }
 
   render(){
     return(
+      
         <div className="script-block">
-          <TabBar callbackFromParent={this.buttonSelectCallBack} tabID={this.props.gridId} />
+          <TabBar callbackFromParent={this.buttonSelectCallBack} tabID={this.props.scriptID} />
           <div className="code-content">
             {this.renderCodeContent()}
           </div>
@@ -40,4 +37,8 @@ class GridBox extends Component {
   }
 }
 
-export default GridBox;
+const mapStateToProps = (state, ownProps) => ({
+  contentDisplay: state.options
+});
+
+export default connect(mapStateToProps)(GridBox);
