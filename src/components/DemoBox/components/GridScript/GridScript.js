@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TabBar from './TabBar';
 import { connect } from 'react-redux'
-
+import BoxContent from '../../../../json/BoxContent.json'
 class GridBox extends Component {
   state = {
     selectedCodeContent: "CSS"
@@ -12,20 +12,16 @@ class GridBox extends Component {
   }
 
   renderCodeContent = () => {
-    if(this.state.selectedCodeContent === "HTML"){
-      return (
-        <pre>{this.props.contentDisplay.html}</pre>
-     );
-    } else{
-      return (
-        <pre>{this.props.contentDisplay.css}</pre>
-     );
+    if (this.props.contentDisplay){
+      return (this.state.selectedCodeContent === "HTML") ? <pre>{this.props.contentDisplay.html}</pre> : <pre>{this.props.contentDisplay.css}</pre>
+    } else {
+      return <pre>{BoxContent}</pre>
     }
   }
 
   render(){
     return(
-      
+
         <div className="script-block">
           <TabBar callbackFromParent={this.buttonSelectCallBack} tabID={this.props.scriptID} />
           <div className="code-content">

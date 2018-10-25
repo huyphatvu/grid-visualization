@@ -39,6 +39,7 @@ class GridBox extends Component {
   }
 }
 
+// get the contentID from state and assign to this.props.contentID
 const mapStateToProps = (state, ownProps) => ({
   contentID: state.options.contentID
 });

@@ -11,19 +11,20 @@ const DemoBox = ({
     demoID,
     children}) => {
       return(
-        <div className={demoClassName}>
+        <div className="demo-container-wrapper">
           <h1> {demoHeader} </h1>
 
           <GridOption
             options={options}
-            optionID={"option" + demoID}
+            optionID={"option-" + demoID}
+            demoID={demoID}
           />
 
           <div className="demo-container">
             <GridScript
               boxContent={boxContent}
-              scriptID={"script" + demoID} />
-            <GridBox gridID={demoID} />
+              scriptID={"script-" + demoID} />
+            <GridBox gridID={"grid-" + demoID} />
           </div>
 
           <div>

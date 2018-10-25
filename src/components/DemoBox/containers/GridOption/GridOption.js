@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 import { toggleOptions } from '../../../../redux/actions'
 
 class GridOption extends Component {
-  handleSelectOption = (e, optionID, contentID) => {
+  handleSelectOption = (e, demoID, contentID) => {
     let option_buttons = document.getElementById(this.props.optionID).childNodes
     for(let i=0; i<option_buttons.length; i++)
       option_buttons[i].classList.remove("current-option")        // removed all toggle buttons
     e.currentTarget.classList.add("current-option")               // specify the current option
-    this.props.toggleOptions(optionID, contentID)                 // send a dispatch
+    this.props.toggleOptions(demoID, contentID)                 // send a dispatch
   }
 
   renderOptions = () => {
@@ -18,7 +18,7 @@ class GridOption extends Component {
       <button
         className="option-button current-option"
         contentID={0}
-        onClick={(e) => this.handleSelectOption(e, this.props.optionID, 0)}> {this.props.options[0]}
+        onClick={(e) => this.handleSelectOption(e, this.props.demoID, 0)}> {this.props.options[0]}
       </button>
     );
     for(let i = 1; i < length; i++){
@@ -26,7 +26,7 @@ class GridOption extends Component {
         <button
           className="option-button"
           contentID={i}
-          onClick={(e) => this.handleSelectOption(e, this.props.optionID, i)}> {this.props.options[i]}
+          onClick={(e) => this.handleSelectOption(e, this.props.demoID, i)}> {this.props.options[i]}
         </button>
       );
     }
@@ -43,7 +43,7 @@ class GridOption extends Component {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({         // create a props name toggleoptions
-    toggleOptions: (optionID, contentID) =>  dispatch(toggleOptions(optionID, contentID))
+    toggleOptions: (demoID, contentID) =>  dispatch(toggleOptions(demoID, contentID))
 })
 
 export default connect(null, mapDispatchToProps)(GridOption);

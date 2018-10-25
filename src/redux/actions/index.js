@@ -22,8 +22,8 @@
 //   SHOW_ACTIVE: 'SHOW_ACTIVE'
 // }
 
-export const toggleOptions = (optionID, contentID) => ({
+export const toggleOptions = (demoID, contentID) => ({
   type: 'TOGGLE_OPTION',
-  optionID,
+  demoID,
   contentID
 })
