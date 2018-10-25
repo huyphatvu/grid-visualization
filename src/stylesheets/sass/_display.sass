@@ -8,14 +8,30 @@
   -webkit-flex-direction: row
   flex-wrap: wrap
   justify-content: space-around
+.flex
+  display: flex
+  flex-direction: column
+  height: 100vh
+  justify-content: space-between
+.inner-flex
+  display: flex
+  flex-direction: row
+  height: 100%
+@media screen and (max-width: 750px)
+  .inner-flex
+    display: block
+  .sidebar
+    display: none
+  .card
+    width: 100% !important
 
 //remember to change _display: body_background to the same min-width if min-width changed
-@media screen and (max-width: 1500px)
-  .flex
-    display: flex
-    flex-direction: column
-    -ms-flex-direction: column
-    -webkit-flex-direction: column
-    justify-content: space-between
-    flex-wrap: nowrap
-    height: 100vh
+// @media screen and (max-width: 1500px)
+//   .flex
+//     display: flex
+//     flex-direction: column
+//     -ms-flex-direction: column
+//     -webkit-flex-direction: column
+//     justify-content: space-between
+//     flex-wrap: nowrap
+//     height: 100vh

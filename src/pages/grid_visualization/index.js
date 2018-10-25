@@ -17,6 +17,7 @@ export default () => {
           <bold>inline-grid</bold> - generates an inline-level grid<br />
         </tab>
       </ DemoBox>
+      <hr />
       <DemoBox
         demoHeader = "Grid Display"
         options = {["grid", "inline-grid"]}

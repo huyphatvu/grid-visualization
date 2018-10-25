@@ -2,7 +2,7 @@ import React from 'react';
 import GridBox from './components/GridBox/GridBox'
 import GridScript from './components/GridScript/GridScript'
 import GridOption from './containers/GridOption/GridOption'
-import Card from '../Card/Card'
+import { Element } from 'react-scroll'
 
 export default ({
     demoClassName,
@@ -12,10 +12,9 @@ export default ({
     demoID,
     children}) => {
       return(
-        <div className="demo-container-wrapper">
-          <Card>
-            <h1> {demoHeader} </h1>
+        <Element name={"demo-" + demoID} className="demo-container-wrapper">
 
+            <h1> {demoHeader} </h1>
             <GridOption
               options={options}
               optionID={"option-" + demoID}
@@ -34,10 +33,11 @@ export default ({
                 />
             </div>
 
-            <p>
+            <p className="grid-description">
               {children}
             </p>
-          </ Card>
-        </div>
+
+        </Element>
+
     );
 }
