@@ -12,16 +12,16 @@ class GridBox extends Component {
   }
 
   renderCodeContent = () => {
-    if (this.props.contentDisplay){
-      return (this.state.selectedCodeContent === "HTML") ? <pre>{this.props.contentDisplay.html}</pre> : <pre>{this.props.contentDisplay.css}</pre>
+    if (this.props.contentScript && this.props.triggeredDemoID === this.props.demoID){
+      // console.log(this.props.triggeredDemoID[0])
+      return (this.state.selectedCodeContent === "HTML") ? <pre>{this.props.contentScript.html}</pre> : <pre>{this.props.contentScript.css}</pre>
     } else {
-      return <pre>{BoxContent}</pre>
+      return (this.state.selectedCodeContent === "HTML") ?<pre>{BoxContent.BoxContentArr[this.props.demoID][0].html}</pre> :  <pre>{BoxContent.BoxContentArr[this.props.demoID][0].css}</pre>
     }
   }
-
+ // BoxContent.BoxContentArr[0][0]
   render(){
     return(
-
         <div className="script-block">
           <TabBar callbackFromParent={this.buttonSelectCallBack} tabID={this.props.scriptID} />
           <div className="code-content">
@@ -34,7 +34,8 @@ class GridBox extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  contentDisplay: state.options
+  contentScript: state.options.contentScript,
+  triggeredDemoID: state.options.triggeredDemoID
 });
 
 export default connect(mapStateToProps)(GridBox);

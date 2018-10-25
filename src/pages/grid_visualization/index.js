@@ -2,7 +2,7 @@ import React from 'react';
 import DemoBox from '../../components/DemoBox/DemoBox';
 // import BoxContent from "../../json/BoxContent.json";
 
-const GridVisualization = () => {
+export default () => {
   return (
     <div>
       <DemoBox
@@ -11,9 +11,11 @@ const GridVisualization = () => {
         demoID = "0"
         >
         Defines the element as a grid container and establishes a new grid formatting context for its contents.<br />
-        Values:<br /><br />
-        grid - generates a block-level grid<br />
-        inline-grid - generates an inline-level grid<br />
+        Values:<br />
+        <tab>
+          <bold>grid</bold> - generates a block-level grid<br />
+          <bold>inline-grid</bold> - generates an inline-level grid<br />
+        </tab>
       </ DemoBox>
       <DemoBox
         demoHeader = "Grid Display"
@@ -29,4 +31,4 @@ const GridVisualization = () => {
   );
 }
 
-export default GridVisualization;
+;
