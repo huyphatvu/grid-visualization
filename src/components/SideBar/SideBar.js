@@ -9,8 +9,8 @@ export default () => {
         <li><h4>Draft</h4></li>
         <li>
           <h3> Grid Display </h3>
-          <JumpLink to="demo-0"> show grid </JumpLink>
-          <JumpLink to="demo-1"> show grid </JumpLink>
+          <JumpLink to="demo-0"> Grid Display </JumpLink>
+          <JumpLink to="demo-1"> Grid Template Columns </JumpLink>
           <JumpLink to="demo-0"> show grid </JumpLink>
         </li>
         <li>

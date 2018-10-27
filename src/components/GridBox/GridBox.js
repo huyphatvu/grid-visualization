@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 class GridBox extends Component {
 
-  
+
 
   reRenderGrid = () => {
     // console.log("content Script: "+ this.props.contentScript)

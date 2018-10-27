@@ -1,5 +1,5 @@
 import React from 'react';
-import GridBox from './components/GridBox/GridBox'
+import GridBox from '../GridBox/GridBox'
 import GridScript from './components/GridScript/GridScript'
 import GridOption from './containers/GridOption/GridOption'
 import { Element } from 'react-scroll'
@@ -22,15 +22,16 @@ export default ({
             />
 
             <div className="demo-container">
-              <GridScript
-                boxContent={boxContent}
-                scriptID={"script-" + demoID}
-                demoID={demoID}
-                />
+
               <GridBox
                 gridID={"grid-" + demoID}
                 demoID={demoID}
                 />
+              <GridScript
+                boxContent={boxContent}
+                scriptID={"script-" + demoID}
+                demoID={demoID}
+                  />
             </div>
 
             <p className="grid-description">
