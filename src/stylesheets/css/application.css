@@ -499,7 +499,6 @@ ul.topnav {
   float: left;
   width: 49%;
   display: block;
-  background: #fbebf0;
   -webkit-box-shadow: 2px 2px 2px 2px rgba(191, 191, 191, 0.36);
   -moz-box-shadow: 2px 2px 2px 2px rgba(191, 191, 191, 0.36);
   box-shadow: 2px 2px 2px 2px rgba(191, 191, 191, 0.36);
@@ -510,15 +509,17 @@ ul.topnav {
   overflow: hidden; }
   .script-block .code-content {
     height: 90%;
-    overflow: scroll; }
+    overflow: scroll;
+    background: #522835; }
     .script-block .code-content > pre {
       overflow-y: scroll;
       font-size: 1.1em;
-      padding: 1em 20px;
       margin: 0;
       border-radius: 10px;
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px; }
+      .script-block .code-content > pre > code {
+        background: #522835; }
 
 @media screen and (max-width: 1100px) {
   .script-block {
