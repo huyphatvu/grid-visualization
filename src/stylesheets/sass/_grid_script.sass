@@ -1,5 +1,5 @@
 @import mixin_custom_funct
-
+$dark-rose: rgb(82, 40, 53)
 .script-block
   height: 25em
   margin: 1em 0 2em
@@ -14,7 +14,7 @@
   .code-content
     height: 90%
     overflow: scroll
-    background: rgb(82, 40, 53)
+    background: $dark-rose
     > pre
       overflow-y: scroll
       font-size: 1.1em
@@ -22,7 +22,7 @@
       margin: 0
       @include border-radius(10px)
       > code
-        background: rgb(82, 40, 53)
+        background: $dark-rose
         // margin: 0.5em
 
 

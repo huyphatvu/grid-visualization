@@ -583,6 +583,7 @@ ul.topnav {
   -moz-box-shadow: 0px 1px 2px 1px rgba(210, 135, 158, 0.37);
   box-shadow: 0px 1px 2px 1px rgba(210, 135, 158, 0.37); }
   .tabbar > button {
+    cursor: pointer;
     border: none;
     height: 35px;
     width: 70px;
@@ -609,6 +610,7 @@ ul.topnav {
   max-width: 29em;
   line-height: 4em; }
   .option-tabbar > button {
+    cursor: pointer;
     margin: 0 1em 0;
     border: none;
     height: 3em;
@@ -967,8 +969,9 @@ textarea {
     .sidebar > ul > li > h3 {
       font-size: 1.6em;
       font-weight: bolder !important;
-      color: #333232; }
+      color: #adad55; }
     .sidebar > ul > li > a {
+      cursor: pointer;
       color: #333232;
       text-decoration: none;
       display: block;
@@ -978,7 +981,8 @@ textarea {
     .sidebar > ul > li > a:last-child {
       margin-bottom: 2em; }
     .sidebar > ul > li > a:hover {
-      text-decoration: underline; }
+      text-decoration: underline;
+      color: #566dc3; }
 
 @media screen and (max-width: 1100px) {
   .sidebar > ul {
