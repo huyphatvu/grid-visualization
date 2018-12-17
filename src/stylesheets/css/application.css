@@ -604,12 +604,14 @@ ul.topnav {
 
 .option-tabbar {
   text-align: center;
-  margin: 0.7em; }
+  margin: auto;
+  max-width: 29em;
+  line-height: 4em; }
   .option-tabbar > button {
     margin: 0 1em 0;
     border: none;
     height: 3em;
-    width: 7em;
+    min-width: 7em;
     font-size: 0.8em;
     color: #bd3761;
     background-color: #fbebf0;
@@ -634,20 +636,63 @@ ul.topnav {
 #grid-0 .inline-grid {
   display: inline-grid; }
 
+#grid-1 > span {
+  display: none; }
+
 #grid-1 .grid-container {
-  grid-template-columns: auto; }
-
-#grid-1 .col-1 {
-  grid-template-columns: auto; }
-
-#grid-1 .col-2 {
   grid-template-columns: auto auto; }
 
-#grid-1 .col-3 {
+#grid-1 .col-1 {
+  grid-template-columns: auto auto; }
+
+#grid-1 .col-2 {
   grid-template-columns: auto auto auto; }
 
+#grid-1 .col-3 {
+  grid-template-columns: 2fr auto; }
+
 #grid-1 .col-4 {
-  grid-template-columns: auto auto auto auto; }
+  grid-template-columns: auto 50px auto; }
+
+#grid-1 .col-5 {
+  grid-template-columns: auto 50% auto; }
+
+#grid-2 > span {
+  display: none; }
+
+#grid-2 .grid-container {
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px auto; }
+
+#grid-2 .row-1 {
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px auto; }
+
+#grid-2 .row-2 {
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 1fr 2fr; }
+
+#grid-2 .row-3 {
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 0 1fr 1fr; }
+
+#grid-3 > span {
+  display: none; }
+
+#grid-3 .grid-container {
+  grid-template-areas: "header header header" "content sidebar" "footer footer";
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 2fr 1fr; }
+
+#grid-3 .area-1 {
+  grid-template-areas: "header header header" "content sidebar" "footer footer";
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 2fr 1fr; }
+
+#grid-3 .area-2 {
+  grid-template-areas: "sidebar header header"  "sidebar content" "footer footer";
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 2fr 1fr; }
 
 .card {
   text-align: left;

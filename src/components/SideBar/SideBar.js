@@ -10,15 +10,14 @@ export default () => {
         <li>
           <h3> Grid Display </h3>
           <JumpLink to="demo-0"> Grid Display </JumpLink>
-          <JumpLink to="demo-1"> Grid Template Columns </JumpLink>
-          <JumpLink to="demo-0"> show grid </JumpLink>
         </li>
         <li>
-          <h3> Grid Display </h3>
-          <a href="/"> show grid </a>
-          <a href="/"> show grid </a>
-          <a href="/"> show grid </a>
+          <h3> Explicit Grid </h3>
+          <JumpLink to="demo-1"> Grid Template Columns </JumpLink>
+          <JumpLink to="demo-2"> Grid Template Rows </JumpLink>
+          <JumpLink to="demo-3"> Grid Template Areas </JumpLink>
         </li>
+
       </ul>
     </div>
   )

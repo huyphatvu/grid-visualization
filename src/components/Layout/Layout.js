@@ -10,7 +10,6 @@ import Card from '../Card/Card'
 export default props => {
   return (
     <div className="flex">
-        <Header />
           <div>
             <div class="inner-flex">
               <SideBar />

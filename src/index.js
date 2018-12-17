@@ -8,7 +8,7 @@ import Index from "./pages/grid_visualization/index"
 import DemoBox2 from './components/DemoBox2/DemoBox'
 import DemoBox3 from './components/DemoBox3/DemoBox'
 // import * as serviceWorker from './serviceWorker';
-import { HashRouter, Route, Switch } from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 import store from "./redux/store"
 import { Provider } from 'react-redux'
 
@@ -21,7 +21,7 @@ class Main extends Component {
     console.log(process.env);
     return (
       <Provider store={store}>
-        <HashRouter>
+        <BrowserRouter>
           <div style = { AppStyle }>
             <Layout>
               <Switch>
@@ -31,7 +31,7 @@ class Main extends Component {
               </Switch>
             </Layout>
           </div>
-        </HashRouter>
+        </BrowserRouter>
       </Provider>
 
     )

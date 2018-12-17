@@ -4,15 +4,52 @@
     display: grid
   .inline-grid
     display: inline-grid
+
 #grid-1
-  
+  > span
+    display: none
   .grid-container
-    grid-template-columns: auto
-  .col-1
-    grid-template-columns: auto
-  .col-2
     grid-template-columns: auto auto
-  .col-3
+  .col-1
+    grid-template-columns: auto auto
+  .col-2
     grid-template-columns: auto auto auto
+  .col-3
+    grid-template-columns: 2fr auto
   .col-4
-    grid-template-columns: auto auto auto auto
+    grid-template-columns: auto 50px auto
+  .col-5
+    grid-template-columns: auto 50% auto
+
+#grid-2
+  > span
+    display: none
+  .grid-container
+    grid-template-columns: auto auto auto
+    grid-template-rows: 100px auto
+  .row-1
+    grid-template-columns: auto auto auto
+    grid-template-rows: 100px auto
+  .row-2
+    grid-template-columns: auto auto auto
+    grid-template-rows: 1fr 1fr 2fr
+  .row-3
+    grid-template-columns: auto auto auto
+    grid-template-rows:  0 1fr 1fr
+
+#grid-3
+  > span
+    display: none
+  .grid-container
+    grid-template-areas: "header header header" "content sidebar" "footer footer"
+    grid-template-columns: auto auto auto
+    grid-template-rows:    1fr 2fr 1fr
+
+  .area-1
+    grid-template-areas: "header header header" "content sidebar" "footer footer"
+    grid-template-columns: auto auto auto
+    grid-template-rows:    1fr 2fr 1fr
+  .area-2
+    grid-template-areas: "sidebar header header"  "sidebar content" "footer footer"
+    grid-template-columns: auto auto auto
+    grid-template-rows: 1fr 2fr 1fr
